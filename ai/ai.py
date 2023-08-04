@@ -7,6 +7,7 @@ from langchain.tools import ShellTool
 
 from ai.cli import get_arguments
 from ai.loading import LoadingIndicator
+from ai.prompts import AGENT_EXECUTE_PROMPT, AGENT_PLAN_PROMPT
 
 
 def main():
@@ -35,13 +36,12 @@ def main():
     finally:
         indicator.stop()
 
-    print(result+'\n\n')
+    print(result + '\n\n')
 
 
 def get_template(shell):
-    return Template("""
-             You are a $shell expert.
-             In as few steps as possible, explain how to use $shell to do the following:
-             
-             {prompt}.
-        """).substitute(shell=shell)
+    return Template(AGENT_PLAN_PROMPT).substitute(shell=shell)
+
+
+def enrich_prompt(prompt):
+    return prompt + AGENT_EXECUTE_PROMPT
