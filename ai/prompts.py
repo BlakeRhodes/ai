@@ -13,6 +13,6 @@ AGENT_PLAN_PROMPT = """
              your steps should be only command line tools, NEVER programs.
              the user does not have any programs they can open.
              so each step should be a command line tool.
-             Yout may use pipes and redirects to combine tools.
+             You may use pipes and redirects to combine tools.
              
         """
