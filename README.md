@@ -75,4 +75,4 @@ This project is provided as-is, and might not always work as expected. Always do
 
 ## Errors 🔍
 
-Please ensure that your OpenAI API Key is correctly inserted and the `.ai-config` file is properly formatted. The `InvalidRequestError` will occur if there are issues with the requests sent to OpenAI. If you encounter any errors, please check your command line arguments or your `.ai-config` file.
+Please ensure that your OpenAI API Key is correctly inserted and the `.ai-config` file is properly formatted. The `Error` will occur if there are issues with the requests sent to OpenAI. If you encounter any errors, please check your command line arguments or your `.ai-config` file.

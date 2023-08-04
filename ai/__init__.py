@@ -1,1 +1,1 @@
-from .ai import run
+from .ai import main
